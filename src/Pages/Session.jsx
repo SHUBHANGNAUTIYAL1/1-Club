@@ -8,6 +8,9 @@ import Bonus from '../Components/Bonus'
 import Testimonials from '../Components/Testimonials'
 import CoachProfile from '../Components/CoachProfile'
 import FAQ from '../Components/FAQ'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
+import CoachSection from '../Components/CoachSection'
 
 function Session() {
   return (
@@ -15,13 +18,14 @@ function Session() {
     className="flex flex-col bg-cover bg-fixed bg-center min-h-screen" 
     style={{ backgroundImage: `url(${meditation})` }}
   >
-        <Workshop/>
+        <Header/>
         <ChangeInLife/>
         <Timeline/>
         <Bonus/>
         <Testimonials/>
-        <CoachProfile/>
+        <CoachSection/>
         <FAQ/>
+        <Footer/>
         
     </div>
   )

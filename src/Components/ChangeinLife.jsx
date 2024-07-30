@@ -26,10 +26,10 @@ const ChangeInLife = () => {
           </div>
         ))}
       </div>
-      <button className="mt-8 bg-yellow-400 border-none outline-none text-black py-3 rounded-full font-bold px-10 hover:bg-yellow-500 transition duration-200 transform hover:scale-105">
-        Enroll Now
+      <button className="mt-8 bg-yellow-400 border-none outline-none text-white  py-4 rounded-full font-bold px-10 hover:bg-yellow-500 transition duration-200 transform hover:scale-105">
+        Book Your Free Spot
         <br />
-        <span className="animate-pulse">Limited Seats Left</span>
+        
       </button>
     </div>
   );

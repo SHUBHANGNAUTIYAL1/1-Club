@@ -5,7 +5,7 @@ import Goal from "../assets/Goal.jpg"
 import Creator from "../assets/creator.jpg"
 import man from "../assets/man.jpeg"
 import mind from "../assets/mind.jpg"
-import self from "../assets/self.jpeg"
+import care from "../assets/care.jpeg"
 
 const TimelineItem = ({ image, title, description, reversed }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -61,10 +61,10 @@ const TimelineItem = ({ image, title, description, reversed }) => {
 
 const Timeline = () => {
   return (
-    <div className="bg-[#e3efec] font-serif ">
+    <div className="bg-[#e3efec] font-serif  ">
       <div className="flex w-full justify-center">
-        <div className="text-center bg-[#a4dacd] rounded-b-xl px-4 py-2 border-b-2 border-r-2 border-l-2 border-green-900 w-[320px] mb-12">
-          <h2 className="text-[20px] text-slate-800 font-semibold mb-4">What will you Learn in 1 hour</h2>
+        <div className="text-center    mb-20 mt-20">
+          <h2 className="text-[40px] text-slate-800 font-semibold mb-4">What will you Learn in 1 hour</h2>
         </div>
       </div>
       <div className="relative max-w-4xl mx-auto">
@@ -98,7 +98,7 @@ const Timeline = () => {
           description="How to rewire your subconscious beliefs with simple proven techniques that you can use every day."
         />
         <TimelineItem
-          image={self} // Replace with actual image URL
+          image={care} // Replace with actual image URL
           title="Self-Love and Self-Care"
           description="Practical steps to start loving and nurturing yourself. This will improve your self-esteem and self-confidence."
           reversed

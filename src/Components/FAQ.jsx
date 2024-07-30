@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Modal from './Modal';
-import Form from './Form';
 
 const faqs = [
   {
@@ -21,52 +19,44 @@ const faqs = [
   { question: "Is it a LIVE workshop?", answer: "Yes, it's a live interactive workshop." }
 ];
 
-const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const Accordion = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <div className="min-h-screen bg-[#e3efec] flex flex-col items-center">
-      <h2 className="text-4xl font-bold mt-10">Frequently Asked Questions:</h2>
-      <div className="w-full max-w-2xl mt-8">
+
+    <div className='w-full flex items-center justify-center bg-[#e3efec]'>
+    <div className="max-w-2xl mx-auto py-8 mt-20 mb-20 ">
+      <h2 className="text-[36px] font-bold text-center text-blue-600">FAQs : 
+      <span className=" ml-2 text-gray-800">
+         Here’s everything you may ask...
+      </span>
+      </h2>
+      
+      <div className="mt-20">
         {faqs.map((faq, index) => (
-          <div key={index} className="border-b border-gray-200">
+          <div key={index} className="border-2 border-gray-300 mb-2">
             <button
-              onClick={() => toggleFAQ(index)}
-              className="w-full text-left p-4 focus:outline-none"
+              className="w-full text-left flex justify-between items-center p-4 text-lg text-gray-800 font-semibold hover:bg-gray-100 focus:outline-none"
+              onClick={() => toggleAccordion(index)}
             >
-              <div className="flex justify-between items-center">
-                <span className={`font-semibold ${openIndex === index ? 'text-red-500' : 'text-gray-700'}`}>{faq.question}</span>
-                <span className="text-xl">{openIndex === index ? '-' : '+'}</span>
-              </div>
+              {faq.question}
+              <span>{activeIndex === index ? '-' : '+'}</span>
             </button>
-            {openIndex === index && <p className="p-4 text-gray-600">{faq.answer}</p>}
+            {activeIndex === index && (
+              <div className="p-4 text-gray-700 bg-gray-50">
+                {faq.answer}
+              </div>
+            )}
           </div>
         ))}
       </div>
-      <button
-        className="mt-10 mb-5 px-10 py-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75"
-        onClick={openModal}
-      >
-        Enroll Now
-      </button>
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <Form onClose={closeModal} />
-      </Modal>
+    </div>
     </div>
   );
 };
 
-export default FAQ;
+export default Accordion;

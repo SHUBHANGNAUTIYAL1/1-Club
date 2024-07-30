@@ -34,10 +34,10 @@ function Bonus() {
         ))}
       </div>
       <div className="mt-8">
-        <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition duration-200 transform hover:scale-105">
-          Enroll Now
+        <button className="bg-yellow-400 text-white px-10 py-3 rounded-full font-bold hover:bg-yellow-500 transition duration-200 transform hover:scale-105">
+          Book Your Free Slot
         </button>
-        <p className="text-center mt-2 font-bold text-white animate-pulse">Limited Seats Left</p>
+        <p className="text-center mt-2 font-bold text-white ">Limited Seats Left</p>
       </div>
     </div>
   );
