@@ -153,7 +153,7 @@ const Form = ({ onClose }) => {
           {loading ? (
             <CgSpinnerAlt className="animate-spin" />
           ) : (
-            "Book You Spot"
+            "Book Your Spot"
           )}
         </button>
       </div>
