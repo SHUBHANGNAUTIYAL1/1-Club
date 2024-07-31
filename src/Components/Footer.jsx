@@ -29,13 +29,13 @@ const Footer = ({ onClick }) => {
             <p className="text-[16px] md:text-[24px] font-bold line-through">
               $50
             </p>
+            <p className="text-[14px] md:text-[16px] text-gray-600">
+              Offer ends in{" "}
+              <span className="font-bold">{formatTime(timeLeft)}</span>
+            </p>
           </div>
           <p className="text-[14px] md:text-[16px] text-gray-600">
             Deadline <span className="font-bold">July 30, 2024</span>
-          </p>
-          <p className="text-[14px] md:text-[16px] text-gray-600">
-            Offer ends in{" "}
-            <span className="font-bold">{formatTime(timeLeft)}</span>
           </p>
         </div>
         <button
