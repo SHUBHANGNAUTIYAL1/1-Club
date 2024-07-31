@@ -1,6 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Footer = ({ onClick }) => {
+  const [timeLeft, setTimeLeft] = useState(12 * 60 * 60); // 12 hours in seconds
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const formatTime = (seconds) => {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    return `${hours.toString().padStart(2, "0")}:${minutes
+      .toString()
+      .padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+  };
+
   return (
     <footer className="fixed bottom-0 left-0 w-full shadow-md py-4 bg-[#cbf7ec]">
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -13,6 +32,10 @@ const Footer = ({ onClick }) => {
           </div>
           <p className="text-[14px] md:text-[16px] text-gray-600">
             Deadline <span className="font-bold">July 30, 2024</span>
+          </p>
+          <p className="text-[14px] md:text-[16px] text-gray-600">
+            Offer ends in{" "}
+            <span className="font-bold">{formatTime(timeLeft)}</span>
           </p>
         </div>
         <button
