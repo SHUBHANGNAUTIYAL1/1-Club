@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { CgSpinnerAlt } from "react-icons/cg";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+
 const Form = ({ onClose }) => {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    contactNumber: "",
+    occupation: "",
+    referralSource: "",
+  });
+
+  const [errors, setErrors] = useState({
     name: "",
     email: "",
     contactNumber: "",
@@ -17,11 +28,66 @@ const Form = ({ onClose }) => {
       ...formData,
       [name]: value,
     });
+    setErrors({
+      ...errors,
+      [name]: "",
+    });
+  };
+
+  const handlePhoneChange = (value) => {
+    setFormData({
+      ...formData,
+      contactNumber: value,
+    });
+    setErrors({
+      ...errors,
+      contactNumber: "",
+    });
+  };
+
+  const validateForm = () => {
+    let formIsValid = true;
+    const newErrors = {};
+
+    if (!formData.name) {
+      formIsValid = false;
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.email) {
+      formIsValid = false;
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      formIsValid = false;
+      newErrors.email = "Email is invalid";
+    }
+
+    if (!formData.contactNumber) {
+      formIsValid = false;
+      newErrors.contactNumber = "Contact number is required";
+    }
+
+    if (!formData.occupation) {
+      formIsValid = false;
+      newErrors.occupation = "Occupation is required";
+    }
+
+    if (!formData.referralSource) {
+      formIsValid = false;
+      newErrors.referralSource = "Referral source is required";
+    }
+
+    setErrors(newErrors);
+    return formIsValid;
   };
 
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
+    if (!validateForm()) {
+      setLoading(false);
+      return;
+    }
     try {
       const response = await axios.post(
         "https://crm-backend-if6g.onrender.com/api/contact/create",
@@ -33,6 +99,7 @@ const Form = ({ onClose }) => {
       onClose(); // Close the modal on successful form submission
     } catch (error) {
       console.error("Error submitting form:", error);
+      setLoading(false);
       // Handle error (e.g., show an error message)
     }
   };
@@ -64,6 +131,9 @@ const Form = ({ onClose }) => {
           value={formData.name}
           onChange={handleChange}
         />
+        {errors.name && (
+          <p className="text-red-500 text-xs italic">{errors.name}</p>
+        )}
       </div>
       <div className="mb-4">
         <label
@@ -81,6 +151,9 @@ const Form = ({ onClose }) => {
           value={formData.email}
           onChange={handleChange}
         />
+        {errors.email && (
+          <p className="text-red-500 text-xs italic">{errors.email}</p>
+        )}
       </div>
       <div className="mb-4">
         <label
@@ -89,15 +162,21 @@ const Form = ({ onClose }) => {
         >
           Contact Number
         </label>
-        <input
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="contactNumber"
-          name="contactNumber"
-          type="tel"
-          placeholder="Contact Number"
+        <PhoneInput
+          country={"us"}
           value={formData.contactNumber}
-          onChange={handleChange}
+          onChange={handlePhoneChange}
+          inputProps={{
+            name: "contactNumber",
+            required: true,
+            autoFocus: false,
+          }}
+          containerClass="w-full"
+          inputClass="w-full shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
+        {errors.contactNumber && (
+          <p className="text-red-500 text-xs italic">{errors.contactNumber}</p>
+        )}
       </div>
       <div className="mb-4">
         <label
@@ -120,6 +199,9 @@ const Form = ({ onClose }) => {
           <option value="Coaches">Coaches</option>
           <option value="Working people">Working people</option>
         </select>
+        {errors.occupation && (
+          <p className="text-red-500 text-xs italic">{errors.occupation}</p>
+        )}
       </div>
       <div className="mb-6">
         <label
@@ -144,6 +226,9 @@ const Form = ({ onClose }) => {
             A friend recommended me
           </option>
         </select>
+        {errors.referralSource && (
+          <p className="text-red-500 text-xs italic">{errors.referralSource}</p>
+        )}
       </div>
       <div className="flex items-center justify-between">
         <button
