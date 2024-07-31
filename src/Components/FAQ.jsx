@@ -28,8 +28,8 @@ const Accordion = () => {
 
   return (
 
-    <div className='w-full flex items-center justify-center bg-[#e3efec]'>
-    <div className="max-w-2xl mx-auto py-8 mt-20 mb-20 ">
+    <div className='w-full flex items-center p-2 md:p-0 justify-center bg-[#e3efec]'>
+    <div className="max-w-2xl mx-auto py-8 md:mt-20 mb-20 ">
       <h2 className="text-[36px] font-bold text-center text-blue-600">FAQs : 
       <span className=" ml-2 text-gray-800">
          Here’s everything you may ask...
