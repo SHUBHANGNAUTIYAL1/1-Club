@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
-
+import coachh from "../assets/coachh.jpg";
 const Header = ({ onClick }) => {
   return (
     <div className="relative w-full font-serif min-h-screen bg-[#f4f7f6] pb-16">
@@ -20,7 +20,11 @@ const Header = ({ onClick }) => {
           <div className="w-[300px]  lg:w-[400px] h-[300px] relative lg:h-[400px] bg-[#c7f1e7] flex items-center justify-center rounded-full">
             <div className="w-[260px]  lg:w-[360px] h-[260px]  lg:h-[360px] bg-[#9cf5e0] rounded-full flex items-center justify-center">
               <div className="w-[220px]  lg:w-[320px] h-[220px]  lg:h-[320px] bg-[#49f5cd] rounded-full">
-                <img src="u" alt="" />
+                <img
+                  className="w-[220px]  lg:w-[320px] h-[220px]  lg:h-[320px]  rounded-full"
+                  src={coachh}
+                  alt=""
+                />
               </div>
             </div>
             <div className="text-center absolute bg-white z-50 px-5 py-4 shadow-md rounded-lg bottom-0  ">

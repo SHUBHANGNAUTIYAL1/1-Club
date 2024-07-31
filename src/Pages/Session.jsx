@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Workshop from "../Components/WorkShop";
 import ChangeInLife from "../Components/ChangeinLife";
 import meditation from "../assets/meditation.jpg";
@@ -23,6 +23,12 @@ function Session() {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      handleOpenModal();
+    }, 1500);
+  }, []);
 
   return (
     <div

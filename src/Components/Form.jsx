@@ -45,7 +45,9 @@ const Form = ({ onClose }) => {
         background: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
       }}
     >
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Contact Us</h2>
+      <h2 className="text-2xl font-bold mb-6 text-gray-800">
+        Get your Free Meditation Guide
+      </h2>
       <div className="mb-4">
         <label
           className="block text-gray-700 text-sm font-bold mb-2"
@@ -102,7 +104,7 @@ const Form = ({ onClose }) => {
           className="block text-gray-700 text-sm font-bold mb-2"
           htmlFor="occupation"
         >
-          What do they do?
+          What you do?
         </label>
         <select
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -124,7 +126,7 @@ const Form = ({ onClose }) => {
           className="block text-gray-700 text-sm font-bold mb-2"
           htmlFor="referralSource"
         >
-          How do they know us?
+          How you know us?
         </label>
         <select
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -148,7 +150,11 @@ const Form = ({ onClose }) => {
           className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="submit"
         >
-          {loading ? <CgSpinnerAlt className="animate-spin" /> : "Submit"}
+          {loading ? (
+            <CgSpinnerAlt className="animate-spin" />
+          ) : (
+            "Book You Spot"
+          )}
         </button>
       </div>
     </form>

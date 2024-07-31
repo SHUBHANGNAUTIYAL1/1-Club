@@ -1,12 +1,12 @@
 import React from "react";
-import coach from "../assets/coach.jpg";
+import coachh from "../assets/coachh.jpg";
 
 const CoachSection = ({ onClick }) => {
   return (
     <div className="flex flex-col md:flex-row items-center bg-gray-50 p-8 md:px-[200px] md:py-16 shadow-lg">
       <div className="w-full md:w-1/2 flex justify-center md:justify-start">
         <img
-          src=""
+          src={coachh}
           className="rounded-lg border-4 border-yellow-500 shadow-lg max-w-full  w-[350px] h-[350px]"
         />
       </div>
