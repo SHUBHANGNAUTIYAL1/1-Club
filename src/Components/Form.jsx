@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-
+import React, { useState } from "react";
+import axios from "axios";
+import { CgSpinnerAlt } from "react-icons/cg";
 const Form = ({ onClose }) => {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    contactNumber: '',
-    occupation: '',
-    referralSource: '',
+    name: "",
+    email: "",
+    contactNumber: "",
+    occupation: "",
+    referralSource: "",
   });
 
   const handleChange = (e) => {
@@ -19,29 +20,37 @@ const Form = ({ onClose }) => {
   };
 
   const handleSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8100/api/contact/create', formData);
+      const response = await axios.post(
+        "https://crm-backend-if6g.onrender.com/api/contact/create",
+        formData
+      );
+      setLoading(false);
       alert("Form submitted successfully");
-      console.log('Response:', response.data);
+      console.log("Response:", response.data);
       onClose(); // Close the modal on successful form submission
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error("Error submitting form:", error);
       // Handle error (e.g., show an error message)
     }
   };
 
   return (
-    <form 
-      onSubmit={handleSubmit} 
+    <form
+      onSubmit={handleSubmit}
       className="w-full max-w-lg mx-auto p-8 rounded-lg shadow-lg"
-      style={{ 
-        background: 'linear-gradient(135deg, #f6d365 0%, #fda085 100%)' 
+      style={{
+        background: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
       }}
     >
       <h2 className="text-2xl font-bold mb-6 text-gray-800">Contact Us</h2>
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+        <label
+          className="block text-gray-700 text-sm font-bold mb-2"
+          htmlFor="name"
+        >
           Name
         </label>
         <input
@@ -55,7 +64,10 @@ const Form = ({ onClose }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+        <label
+          className="block text-gray-700 text-sm font-bold mb-2"
+          htmlFor="email"
+        >
           Email
         </label>
         <input
@@ -69,7 +81,10 @@ const Form = ({ onClose }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="contactNumber">
+        <label
+          className="block text-gray-700 text-sm font-bold mb-2"
+          htmlFor="contactNumber"
+        >
           Contact Number
         </label>
         <input
@@ -83,7 +98,10 @@ const Form = ({ onClose }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="occupation">
+        <label
+          className="block text-gray-700 text-sm font-bold mb-2"
+          htmlFor="occupation"
+        >
           What do they do?
         </label>
         <select
@@ -102,7 +120,10 @@ const Form = ({ onClose }) => {
         </select>
       </div>
       <div className="mb-6">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="referralSource">
+        <label
+          className="block text-gray-700 text-sm font-bold mb-2"
+          htmlFor="referralSource"
+        >
           How do they know us?
         </label>
         <select
@@ -117,7 +138,9 @@ const Form = ({ onClose }) => {
           </option>
           <option value="Fb groups">Fb groups</option>
           <option value="Instagram">Instagram</option>
-          <option value="A friend recommended me">A friend recommended me</option>
+          <option value="A friend recommended me">
+            A friend recommended me
+          </option>
         </select>
       </div>
       <div className="flex items-center justify-between">
@@ -125,7 +148,7 @@ const Form = ({ onClose }) => {
           className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="submit"
         >
-          Submit
+          {loading ? <CgSpinnerAlt className="animate-spin" /> : "Submit"}
         </button>
       </div>
     </form>

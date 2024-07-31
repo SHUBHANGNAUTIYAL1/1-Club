@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
-import '../App.css'; // Import the CSS file with the animation styles
+import React, { useRef, useEffect, useState } from "react";
+import "../App.css"; // Import the CSS file with the animation styles
 import heal from "../assets/heal.jpeg";
 import Goal from "../assets/Goal.jpg";
 import Creator from "../assets/creator.jpg";
@@ -36,21 +36,31 @@ const TimelineItem = ({ image, title, description, reversed }) => {
 
   useEffect(() => {
     if (isVisible) {
-      itemRef.current.classList.add('animate');
+      itemRef.current.classList.add("animate");
     } else {
-      itemRef.current.classList.remove('animate');
+      itemRef.current.classList.remove("animate");
     }
   }, [isVisible]);
 
   return (
     <div
       ref={itemRef}
-      className={`flex flex-col md:flex-row items-center ${reversed ? 'md:flex-row-reverse' : ''} mb-8 timeline-item`}
+      className={`flex flex-col md:flex-row items-center ${
+        reversed ? "md:flex-row-reverse" : ""
+      } mb-8 timeline-item`}
     >
-      <div className={`md:w-1/2 p-4 md:border-2 md:border-green-800 ${reversed ? 'ml-4 rounded-r-xl' : 'mr-4 rounded-l-xl'}`}>
+      <div
+        className={`w-full md:w-1/2 p-4 md:border-2 md:border-green-800 ${
+          reversed ? "md:ml-4 rounded-r-xl" : "md:mr-4 rounded-l-xl"
+        }`}
+      >
         <img src={image} alt={title} className="w-full h-auto rounded-md" />
       </div>
-      <div className={`md:w-1/2 px-6 bg-[#a4dacd] rounded-xl py-10 ${reversed ? 'mr-4' : 'ml-4'}`}>
+      <div
+        className={`w-full md:w-1/2 px-6 bg-[#a4dacd] rounded-xl py-10 ${
+          reversed ? "md:mr-4" : "md:ml-4"
+        }`}
+      >
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p>{description}</p>
       </div>
@@ -63,7 +73,9 @@ const Timeline = () => {
     <div className="bg-[#e3efec] font-serif">
       <div className="flex w-full justify-center">
         <div className="text-center mb-20 mt-20">
-          <h2 className="text-[32px] md:text-[40px] text-slate-800 font-semibold mb-4">What will you Learn in 1 hour</h2>
+          <h2 className="text-[32px] md:text-[40px] text-slate-800 font-semibold mb-4">
+            What will you Learn in 1 hour
+          </h2>
         </div>
       </div>
       <div className="relative max-w-4xl mx-auto px-4">
