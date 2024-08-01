@@ -3,7 +3,7 @@ import React from "react";
 const ChangeInLife = ({ onClick }) => {
   return (
     <div className="font-serif flex flex-col items-center justify-center p-8 min-h-screen">
-      <h1 className="text-white text-3xl font-bold mb-8 mt-20 animate-bounce">
+      <h1 className="text-white text-3xl font-bold mb-14 animate-bounce mt-10 md:mt-0 ">
       Experience Meditation that 100% Works
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
