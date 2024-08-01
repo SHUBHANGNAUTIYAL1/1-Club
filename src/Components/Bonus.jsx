@@ -1,69 +1,55 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGift,
-  faChild,
-  faBook,
-  faSmile,
-  faTasks,
-  faSun,
-} from "@fortawesome/free-solid-svg-icons";
+import { faGift, faChild, faBook, faSmile } from "@fortawesome/free-solid-svg-icons";
 
 function Bonus({ onClick }) {
   const bonuses = [
     {
       id: 1,
-      title: "21 day Abundance Challenge",
-      price: "Rs.1199",
+      title: "30-Day Wealth Acceleration Course",
+      price: "₹1999",
+      description: "A comprehensive program designed to fast-track your financial growth with daily actionable steps and mindset shifts.",
       icon: faGift,
     },
     {
       id: 2,
-      title: "Inner Child Healing Meditation",
-      price: "Rs.2099",
+      title: "Deep Healing Transformation Pack",
+      price: "₹2499",
+      description: "Includes Inner Child Healing Meditation, Advanced Trauma Release Session, and Emotional Freedom Techniques (EFT) guide.",
       icon: faChild,
     },
     {
       id: 3,
-      title: "111 Affirmations e-book (Health, Money, Relationship, Career)",
-      price: "Rs.599",
+      title: "Abundance Meditation Tapes",
+      price: "₹1799",
+      description: "A series of guided meditation tapes focused on creating a mindset of abundance and prosperity.",
       icon: faBook,
     },
     {
       id: 4,
-      title: "Improve Self Esteem- Guided Meditation",
-      price: "Rs.1698",
+      title: "Rapid Destress Audio",
+      price: "₹999",
+      description: "An audio track engineered to provide quick relief from stress and anxiety, perfect for busy professionals.",
       icon: faSmile,
-    },
-    {
-      id: 5,
-      title: "Overcome Procrastination & Increase Productivity",
-      price: "Rs.795",
-      icon: faTasks,
-    },
-    {
-      id: 6,
-      title: "The Miracle Morning routine - 90 day challenge",
-      price: "Rs.1209",
-      icon: faSun,
     },
   ];
 
   return (
-    <div className="min-h-screen px-10 flex flex-col items-center justify-center ">
-      <div className="text-center mt-10 mb-8">
-        <h1 className="text-3xl font-bold text-white animate-bounce">
-          Get Bonuses Worth Rs.7599
+    <div className="min-h-screen px-10 bg-[#f8f5f8] flex flex-col items-center justify-center">
+      <div className="text-center mt-5 mb-8">
+        <h1 className=" text-[30px] md:text-[50px] font-bold text-black md:animate-bounce">
+          Overcome Stress and Anxiety in 1Hr 
         </h1>
+        <h1 className=" text-[20px] mt-4 md:text-[30px] font-bold text-black"> Join and Become Like the Top 1% Successful People</h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 mt-10 lg:grid-cols-4 gap-6">
         {bonuses.map((bonus) => (
           <div
             key={bonus.id}
-            className="bg-black bg-opacity-50 p-6 rounded-lg shadow-lg text-center transform transition duration-500 hover:scale-105 hover:bg-opacity-70"
+            className="bg-[#a4dacd] p-6 rounded-lg shadow-lg text-center transform transition duration-500 hover:scale-105"
           >
             <div className="mb-4">
-              <div className="w-16 h-16 mx-auto bg-black bg-opacity-60 rounded-full flex items-center justify-center animate-pulse">
+              <div className="w-16 h-16 mx-auto bg-black rounded-full flex items-center justify-center animate-pulse">
                 <FontAwesomeIcon
                   icon={bonus.icon}
                   size="2x"
@@ -71,11 +57,12 @@ function Bonus({ onClick }) {
                 />
               </div>
             </div>
-            <h2 className="text-xl font-bold text-white">
+            <h2 className="text-xl font-bold text-black">
               Bonus No.{bonus.id}
             </h2>
-            <p className="mt-2 text-white">
-              {bonus.title} –{" "}
+            <p className="mt-2 text-black font-semibold">{bonus.title}</p>
+            <p className="mt-2 text-black">
+              {bonus.description} –{" "}
               <span className="font-semibold">{bonus.price}</span>
             </p>
           </div>
@@ -83,13 +70,13 @@ function Bonus({ onClick }) {
       </div>
       <div className="mt-8">
         <button
-          className="bg-yellow-400 text-white px-10 py-3 rounded-full font-bold hover:bg-yellow-500 transition duration-200 transform hover:scale-105"
+          className="bg-yellow-400 md:text-[24px] text-black mt-5 px-10 py-3 rounded-full font-bold hover:bg-yellow-500 transition duration-200 transform hover:scale-105"
           onClick={onClick}
         >
           Book Your Free Slot
         </button>
-        <p className="text-center mt-2 font-bold text-white  mb-10">
-          90% seats booked{" "}
+        <p className="text-center text-[20px] mt-2 font-bold text-black mb-10">
+          90% seats booked
         </p>
       </div>
     </div>

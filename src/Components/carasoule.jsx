@@ -9,74 +9,41 @@ import "../App.css";
 const Banners = [
   {
     content:
-      "Although a bit on the pricier side, the breads deliver the quality. ",
-    name: "Saravana",
-    location: "Banglore",
+      "I felt so refreshed and calm after the session. It was an incredible experience. Highly recommended to anyone needing relaxation. The session exceeded my expectations. Thank you so much!",
+    name: "Sarah",
+    location: "New York",
     img: human,
   },
   {
     content:
-      "I was never a fan of bread made from wheat due to their bland taste, but the one with honey completely changed my mind !",
-    name: "Saravana",
-    location: "Banglore",
+      "Lydia was fantastic during the session. I learned a lot in just one hour. The meditation was very informative and beneficial. I highly appreciate Lydia's guidance. Great session!",
+    name: "David",
+    location: "Los Angeles",
     img: human,
   },
   {
     content:
-      "The coconut milk bread has my heart ! I never knew my favourite ingredient could be used in breads.",
-    name: "Saravana",
-    location: "Banglore",
+      "This was the most relaxing hour of my week. I feel great after the session. It significantly boosted my well-being. The calmness I felt was unparalleled. Thank you for the wonderful experience!",
+    name: "Akshaya",
+    location: "San Francisco",
     img: human,
   },
   {
     content:
-      "If it’s healthy then the taste is usually compromised. But the bread from Mahimyfoods is nutritious and tastes great ! ",
-    name: "Saravana",
-    location: "Banglore",
-    img: human,
-  },
-  {
-    content: "I never knew anything this tasty could be healthy!",
-    name: "Saravana",
-    location: "Banglore",
+      "A truly peaceful experience that helped me de-stress. I felt completely at ease during the session. The meditative experience was calming and effective. It greatly reduced my stress. Highly recommend it!",
+    name: "Riya",
+    location: "Chicago",
     img: human,
   },
   {
     content:
-      "As a bread lover and a gym rat, I restricted myself from consuming bread. But Mahimyfoods changed my perspective and now I can enjoy a slice of bread every once in a while without feeling guilty about it.",
-    name: "Saravana",
-    location: "Banglore",
-    img: human,
-  },
-  {
-    content:
-      "I used to completely avoid breads, but the wheat bread with honey has changed my perspective and now I can’t do without eating it at least thrice a week !",
-    name: "Saravana",
-    location: "Banglore",
-    img: human,
-  },
-  {
-    content:
-      "I have tried multiple nutritious bread brands, but Mahimyfoods seems to be my favourite. Their process of baking is transparent and extremely hygienic.",
-    name: "Saravana",
-    location: "Banglore",
-    img: human,
-  },
-  {
-    content:
-      "Given my busy work schedule, Mahimyfood breads have come to my rescue. They indeed pack a punch of nutrition in very loaf of bread. ",
-    name: "Saravana",
-    location: "Banglore",
-    img: human,
-  },
-  {
-    content:
-      "Indha wheat bread laam sweet ah ve irukaadhu, but ivangal oda wheat bread with honey romba nalla irukku. Saapta wheat bread nu eh solla maateenga !",
-    name: "Saravana",
-    location: "Banglore",
+      "This meditation session was a game-changer for me. I felt so relaxed afterward. Lydia provided an amazing session. The experience was deeply relaxing and transformative. Thank you, Lydia!",
+    name: "Jessica",
+    location: "Miami",
     img: human,
   },
 ];
+
 
 function Carousel() {
   const [slidesToShow, setSlidesToShow] = useState(3);
@@ -146,6 +113,7 @@ function Carousel() {
                       <h1 className="gabarito font-bold text-[19.2px]">
                         {banner.name}
                       </h1>
+                      
                     </div>
                     <img src={comma} alt="" />
                   </div>

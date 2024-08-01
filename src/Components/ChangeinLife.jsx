@@ -2,29 +2,35 @@ import React from "react";
 
 const ChangeInLife = ({ onClick }) => {
   return (
-    <div className="font-serif flex flex-col items-center justify-center p-8  min-h-screen">
+    <div className="font-serif flex flex-col items-center justify-center p-8 min-h-screen">
       <h1 className="text-white text-3xl font-bold mb-8 mt-20 animate-bounce">
-        What it will change in Your Life
+      Experience Meditation that 100% Works
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {[
           {
-            emoji: "😊",
-            text: "You will feel more emotionally stable & Balanced",
+            emoji: "🔬",
+            text: "Proven Techniques: Engage in meditation practices that have been scientifically proven to reduce stress, improve focus, and enhance overall well-being.",
           },
-          { emoji: "🏆", text: "You will achieve all your Goals in 2024" },
           {
-            emoji: "👪",
-            text: "Your relationship with your partner, family and friends will get better",
+            emoji: "🧘‍♂️",
+            text: "Deep Relaxation: Experience a state of deep relaxation that rejuvenates your mind and body, providing immediate relief from stress and anxiety.",
           },
-          { emoji: "💸", text: "You will attract more money and abundance" },
+          {
+            emoji: "💫",
+            text: "Lasting Impact: Unlike typical feel-good meditations, our techniques offer lasting changes by addressing the root causes of your stress and anxiety.",
+          },
           {
             emoji: "🔄",
-            text: "You won't repeat the toxic patterns in your life anymore",
+            text: "Life Transformation: Witness how these practices can transform your life by improving your mental clarity, emotional stability, and overall happiness.",
           },
           {
-            emoji: "🚀",
-            text: "You will STOP procrastinating and become an achiever with high self confidence",
+            emoji: "😴",
+            text: "Better Sleep: Achieve a more restful and restorative sleep by incorporating meditation into your nightly routine, helping you wake up refreshed.",
+          },
+          {
+            emoji: "❤️",
+            text: "Health Benefits: Boost your immune system, lower blood pressure, and improve heart health through regular meditation practices.",
           },
         ].map((item, index) => (
           <div
@@ -41,7 +47,7 @@ const ChangeInLife = ({ onClick }) => {
         ))}
       </div>
       <button
-        className="mt-8 bg-yellow-400 border-none outline-none text-white  py-4 rounded-full font-bold px-10 hover:bg-yellow-500 transition duration-200 transform hover:scale-105"
+        className="mt-8 bg-yellow-400 border-none outline-none text-white py-4 rounded-full font-bold px-10 hover:bg-yellow-500 transition duration-200 transform hover:scale-105"
         onClick={onClick}
       >
         Book Your Free Spot

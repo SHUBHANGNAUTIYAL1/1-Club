@@ -41,7 +41,7 @@ function Session() {
       <Bonus onClick={handleOpenModal} />
       <Testimonials />
       <CoachSection onClick={handleOpenModal} />
-      <FAQ />
+      <FAQ onClick={handleOpenModal}/>
       <Footer onClick={handleOpenModal} />
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
         <Form onClose={handleCloseModal} />

@@ -112,8 +112,8 @@ const Form = ({ onClose }) => {
         background: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
       }}
     >
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">
-        Get your Free Meditation Guide
+      <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+      Get your free 1-minute Guided Meditation
       </h2>
       <div className="mb-4">
         <label

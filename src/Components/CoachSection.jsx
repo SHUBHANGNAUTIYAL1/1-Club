@@ -7,34 +7,24 @@ const CoachSection = ({ onClick }) => {
       <div className="w-full md:w-1/2 flex justify-center md:justify-start">
         <img
           src={coachh}
-          className="rounded-lg border-4 border-yellow-500 shadow-lg max-w-full  w-[350px] h-[350px]"
+          className="rounded-lg border-4 border-yellow-500 shadow-lg max-w-full  w-[400px] h-[400px]"
         />
       </div>
       <div className="w-full md:w-1/2 mt-8 md:mt-0 md:ml-8">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-800">
-          Know your Coach
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-800">
+        Meet Lydia Binil
         </h2>
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-          Lydia Binil
+        <h1 className="text-xl md:text-3xl font-semibold text-gray-900 mt-2">
+        Your Guide to Freedom and Success
         </h1>
         <p className="text-gray-700 mt-4">
-          Lydia Binil has been a pivotal figure in the personal development
-          industry for over a decade. As a certified Business Success & Money
-          Block Coach, she has healed trauma and transformed beliefs for
-          success, guiding over 10k+ people to unlock their full potential.
+        Imagine waking up every day feeling free, focused, and in flow. This is the life Lydia Binil is passionate about helping others achieve. Lydia is a powerhouse of transformation, blending scientific knowledge, behavioral expertise, and personal experience. Her journey began as a Biotechnologist and evolved with an MBA in Human Behaviour, ultimately leading her to become a Subconscious Rewiring Practitioner. Over the past 8 years, she has guided more than 8,000 ambitious professionals and entrepreneurs to reach their goals with ease.
         </p>
         <p className="text-gray-700 mt-4">
-          Lydia specialises in empowering freelancers, coaches, small business
-          owners, and influencers to achieve their highest potential. Her
-          mission is to help individuals break free from limiting beliefs and
-          lead abundant lives through proven techniques. Join her for a
-          transformative meditation session and start your journey towards
-          personal and professional growth.
+        Lydia’s credentials are impressive. She is an award-winning Certified MAP Practitioner, renowned international speaker, and best-selling author of "Mumpreneur on Fire." Her unique approach combines cutting-edge subconscious rewiring techniques with practical strategies, making her guidance both powerful and relatable. Lydia's personal triumph over childhood trauma fuels her mission to help 1 million people live lives of freedom and flow.
         </p>
         <p className="text-gray-700 mt-4">
-          She is very passionate about helping people unlock their potential and
-          live a life of abundance and is on a mission to help 10 Million people
-          become their best version.
+        Join Lydia on a transformative journey to break free from limitations and step into a life of abundance and fulfillment. Discover the extraordinary power of subconscious rewiring and unlock your highest potential with Lydia Binil.
         </p>
         <div className="mt-6 flex justify-center items-center">
           <button

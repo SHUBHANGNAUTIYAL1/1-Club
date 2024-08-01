@@ -34,9 +34,7 @@ const Footer = ({ onClick }) => {
             Offer ends in{" "}
             <span className="font-bold">{formatTime(timeLeft)}</span>
           </p>
-          <p className="text-[14px] md:text-[16px] text-gray-600">
-            Deadline <span className="font-bold">July 30, 2024</span>
-          </p>
+          
         </div>
         <button
           className="text-white font-bold bg-yellow-400 py-3 px-5 md:px-16 text-[16px] md:text-[24px] rounded-full"
