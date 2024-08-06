@@ -112,10 +112,10 @@ const Form = ({ onClose }) => {
         background: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
       }}
     >
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-5 md:mb-6 text-gray-800">
+      <h2 className="text-xl  md:text-2xl font-bold text-center mb-4 sm:mb-3 md:mb-3 text-gray-800">
         Get your free 1-minute Guided Meditation
       </h2>
-      <div className="mb-4 sm:mb-5 md:mb-6">
+      <div className="mb-4 sm:mb-3 md:mb-3">
         <label
           className="block text-gray-700 text-sm md:text-base font-bold mb-2"
           htmlFor="name"
@@ -123,7 +123,7 @@ const Form = ({ onClose }) => {
           Name
         </label>
         <input
-          className="shadow appearance-none border rounded w-full py-2 px-3 sm:py-3 sm:px-4 md:py-4 md:px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none border rounded w-full py-2 px-3  md:py-2 md:px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="name"
           name="name"
           type="text"
@@ -135,7 +135,7 @@ const Form = ({ onClose }) => {
           <p className="text-red-500 text-xs md:text-sm italic">{errors.name}</p>
         )}
       </div>
-      <div className="mb-4 sm:mb-5 md:mb-6">
+      <div className="mb-4 sm:mb-3 md:mb-3">
         <label
           className="block text-gray-700 text-sm md:text-base font-bold mb-2"
           htmlFor="email"
@@ -143,7 +143,7 @@ const Form = ({ onClose }) => {
           Email
         </label>
         <input
-          className="shadow appearance-none border rounded w-full py-2 px-3 sm:py-3 sm:px-4 md:py-4 md:px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none border rounded w-full py-2 px-3  md:py-2 md:px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="email"
           name="email"
           type="email"
@@ -155,7 +155,7 @@ const Form = ({ onClose }) => {
           <p className="text-red-500 text-xs md:text-sm italic">{errors.email}</p>
         )}
       </div>
-      <div className="mb-4 sm:mb-5 md:mb-6">
+      <div className="mb-4 sm:mb-3 md:mb-3">
         <label
           className="block text-gray-700 text-sm md:text-base font-bold mb-2"
           htmlFor="contactNumber"
@@ -172,13 +172,13 @@ const Form = ({ onClose }) => {
             autoFocus: false,
           }}
           containerClass="w-full"
-          inputClass="w-full shadow appearance-none border rounded py-2 px-3 sm:py-3 sm:px-4 md:py-4 md:px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          inputClass="w-full shadow appearance-none border rounded py-2 px-3  md:py-2 md:px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
         {errors.contactNumber && (
           <p className="text-red-500 text-xs md:text-sm italic">{errors.contactNumber}</p>
         )}
       </div>
-      <div className="mb-4 sm:mb-5 md:mb-6">
+      <div className="mb-4 sm:mb-3 md:mb-3">
         <label
           className="block text-gray-700 text-sm md:text-base font-bold mb-2"
           htmlFor="occupation"
@@ -186,7 +186,7 @@ const Form = ({ onClose }) => {
           What you do?
         </label>
         <select
-          className="shadow appearance-none border rounded w-full py-2 px-3 sm:py-3 sm:px-4 md:py-4 md:px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none border rounded w-full py-2 px-3  md:py-2 md:px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="occupation"
           name="occupation"
           value={formData.occupation}
@@ -196,7 +196,7 @@ const Form = ({ onClose }) => {
             Select an option
           </option>
           <option value="Entrepreneurs">Entrepreneurs</option>
-          <option value="Coache/Business Owners">Coache / Business Owners</option>
+          <option value="Coache/Business Owners">Coach / Business Owners</option>
           <option value="Salaried Employee">Salaried Employee</option>
           <option value="Others">Others</option>
         </select>
@@ -212,7 +212,7 @@ const Form = ({ onClose }) => {
           How you know us?
         </label>
         <select
-          className="shadow appearance-none border rounded w-full py-2 px-3 sm:py-3 sm:px-4 md:py-4 md:px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none border rounded w-full py-2 px-3  md:py-2 md:px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="referralSource"
           name="referralSource"
           value={formData.referralSource}
@@ -233,7 +233,7 @@ const Form = ({ onClose }) => {
       </div>
       <div className="flex items-center justify-between">
         <button
-          className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 sm:py-3 sm:px-5 md:py-4 md:px-6 rounded focus:outline-none focus:shadow-outline"
+          className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 sm:py-3 sm:px-5 md:py-2 md:px-3 rounded focus:outline-none focus:shadow-outline"
           type="submit"
         >
           {loading ? (
