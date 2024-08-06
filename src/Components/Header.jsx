@@ -3,6 +3,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 import coachh from "../assets/coachh.jpg";
 const Header = ({ onClick }) => {
+
+  const filled = localStorage.getItem("Filled");
+  const handleSubmit=()=>{
+  if(filled)
+    window.location.href="https://docs.google.com/document/d/10eNhJmtaEznsqm-65QHxbj3B8DepOT1EYofZtZz1XWo/edit#heading=h.sm9gundt5rep";
+  else
+  onClick();
+
+}
+
   return (
     <div className="relative w-full font-serif min-h-screen bg-[#f4f7f6] pb-16">
       <div className="text-center py-8 mt-20">
@@ -69,7 +79,7 @@ const Header = ({ onClick }) => {
           <div className="mt-8 flex  w-full flex-col items-center gap-4 justify-center">
             <button
               className="md:text-[16px] lg:text-[20px] text-white font-bold py-4 px-20 rounded-full bg-yellow-400"
-              onClick={onClick}
+              onClick={handleSubmit}
             >
               Book Your Free Spot
             </button>

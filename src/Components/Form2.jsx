@@ -5,7 +5,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Alert from "./Alert"; // Import the Alert component
 
-const Form = ({ onClose }) => {
+const Form2 = ({ onClose }) => {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -91,7 +91,7 @@ const Form = ({ onClose }) => {
     }
     try {
       const response = await axios.post(
-        "https://crm-backend-if6g.onrender.com/api/pop/create",
+        "https://crm-backend-if6g.onrender.com/api/contact/create",
         formData
       );
       localStorage.setItem("Filled", true);
@@ -253,4 +253,4 @@ const Form = ({ onClose }) => {
   );
 };
 
-export default Form;
+export default Form2;

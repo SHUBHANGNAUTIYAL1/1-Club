@@ -12,9 +12,14 @@ import Footer from "../Components/Footer";
 import CoachSection from "../Components/CoachSection";
 import Modal from "../Components/Modal";
 import Form from "../Components/Form";
+import Form2 from "../Components/Form2";
 
 function Session() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen2, setIsModalOpen2] = useState(false);
+  const filled = localStorage.getItem("Filled");
+ 
+
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -24,9 +29,17 @@ function Session() {
     setIsModalOpen(false);
   };
 
+  const handleOpenModal2 = () => {
+    setIsModalOpen2(true);
+  };
+
+  const handleCloseModal2 = () => {
+    setIsModalOpen2(false);
+  };
+
   useEffect(() => {
     setTimeout(() => {
-      handleOpenModal();
+      if(!filled) handleOpenModal();
     }, 1500);
   }, []);
 
@@ -35,16 +48,19 @@ function Session() {
       className="flex flex-col bg-cover bg-fixed bg-center min-h-screen"
       style={{ backgroundImage: `url(${meditation})` }}
     >
-      <Header onClick={handleOpenModal} />
-      <ChangeInLife onClick={handleOpenModal} />
+      <Header onClick={handleOpenModal2} />
+      <ChangeInLife onClick={handleOpenModal2} />
       <Timeline />
-      <Bonus onClick={handleOpenModal} />
+      <Bonus onClick={handleOpenModal2} />
       <Testimonials />
-      <CoachSection onClick={handleOpenModal} />
-      <FAQ onClick={handleOpenModal}/>
-      <Footer onClick={handleOpenModal} />
+      <CoachSection onClick={handleOpenModal2} />
+      <FAQ onClick={handleOpenModal2}/>
+      <Footer onClick={handleOpenModal2} />
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-        <Form onClose={handleCloseModal} />
+        <Form2 onClose={handleCloseModal} />
+      </Modal>
+      <Modal isOpen={isModalOpen2} onClose={handleCloseModal2}>
+        <Form onClose={handleCloseModal2} />
       </Modal>
     </div>
   );

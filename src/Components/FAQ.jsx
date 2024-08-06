@@ -20,6 +20,13 @@ const faqs = [
 ];
 
 const Accordion = ({ onClick }) => {
+  const filled = localStorage.getItem("Filled");
+  const handleSubmit=()=>{
+  if(filled)
+    window.location.href="https://docs.google.com/document/d/10eNhJmtaEznsqm-65QHxbj3B8DepOT1EYofZtZz1XWo/edit#heading=h.sm9gundt5rep";
+  else
+  onClick();
+  }
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -58,7 +65,7 @@ const Accordion = ({ onClick }) => {
         <div className="flex justify-center mt-10">
           <button
             className="bg-yellow-400 border-none outline-none text-white py-4 px-10 rounded-full font-bold hover:bg-yellow-500 transition duration-200 transform hover:scale-105"
-            onClick={onClick}
+            onClick={handleSubmit}
           >
             Book Your Free Slot
           </button>

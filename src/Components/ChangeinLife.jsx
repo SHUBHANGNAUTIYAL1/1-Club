@@ -1,6 +1,13 @@
 import React from "react";
 
 const ChangeInLife = ({ onClick }) => {
+  const filled = localStorage.getItem("Filled");
+  const handleSubmit=()=>{
+  if(filled)
+    window.location.href="https://docs.google.com/document/d/10eNhJmtaEznsqm-65QHxbj3B8DepOT1EYofZtZz1XWo/edit#heading=h.sm9gundt5rep";
+  else
+  onClick();
+  }
   return (
     <div className="font-serif flex flex-col items-center justify-center p-8 min-h-screen">
       <h1 className="text-white text-3xl font-bold mb-14 animate-bounce mt-10 md:mt-0 ">
@@ -48,7 +55,7 @@ const ChangeInLife = ({ onClick }) => {
       </div>
       <button
         className="mt-8 bg-yellow-400 border-none outline-none text-white py-4 rounded-full font-bold px-10 hover:bg-yellow-500 transition duration-200 transform hover:scale-105"
-        onClick={onClick}
+        onClick={handleSubmit}
       >
         Book Your Free Spot
         <br />

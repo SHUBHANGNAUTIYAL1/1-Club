@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 
 const Footer = ({ onClick }) => {
   const [timeLeft, setTimeLeft] = useState(12 * 60 * 60); // 12 hours in seconds
+  const filled = localStorage.getItem("Filled");
+  const handleSubmit=()=>{
+  if(filled)
+    window.location.href="https://docs.google.com/document/d/10eNhJmtaEznsqm-65QHxbj3B8DepOT1EYofZtZz1XWo/edit#heading=h.sm9gundt5rep";
+  else
+  onClick();
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,7 +45,7 @@ const Footer = ({ onClick }) => {
         </div>
         <button
           className="text-white font-bold bg-yellow-400 py-3 px-5 md:px-16 text-[16px] md:text-[24px] rounded-full"
-          onClick={onClick}
+          onClick={handleSubmit}
         >
           Book Your Free Spot
         </button>

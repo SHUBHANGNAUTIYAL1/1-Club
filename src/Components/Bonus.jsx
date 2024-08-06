@@ -3,42 +3,52 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGift, faChild, faBook, faSmile } from "@fortawesome/free-solid-svg-icons";
 
 function Bonus({ onClick }) {
+  const filled = localStorage.getItem("Filled");
+  const handleSubmit=()=>{
+  if(filled)
+    window.location.href="https://docs.google.com/document/d/10eNhJmtaEznsqm-65QHxbj3B8DepOT1EYofZtZz1XWo/edit#heading=h.sm9gundt5rep";
+  else
+  onClick();
+  }
   const bonuses = [
     {
       id: 1,
       title: "30-Day Wealth Acceleration Course",
-      price: "₹1999",
+      price: "$30",
       description: "A comprehensive program designed to fast-track your financial growth with daily actionable steps and mindset shifts.",
       icon: faGift,
     },
     {
       id: 2,
       title: "Deep Healing Transformation Pack",
-      price: "₹2499",
+      price: "$49",
       description: "Includes Inner Child Healing Meditation, Advanced Trauma Release Session, and Emotional Freedom Techniques (EFT) guide.",
       icon: faChild,
     },
     {
       id: 3,
       title: "Abundance Meditation Tapes",
-      price: "₹1799",
+      price: "$49",
       description: "A series of guided meditation tapes focused on creating a mindset of abundance and prosperity.",
       icon: faBook,
     },
     {
       id: 4,
       title: "Rapid Destress Audio",
-      price: "₹999",
+      price: "$30",
       description: "An audio track engineered to provide quick relief from stress and anxiety, perfect for busy professionals.",
       icon: faSmile,
     },
   ];
 
+  
+
   return (
     <div className="min-h-screen px-10 bg-[#f8f5f8] flex flex-col items-center justify-center">
       <div className="text-center mt-5 mb-8">
         <h1 className=" text-[30px] md:text-[50px] font-bold text-black md:animate-bounce">
-          Get Bonuses Worth Rs. 7296
+          Get Bonuses Worth $160
+          
         </h1>
        
       </div>
@@ -71,7 +81,7 @@ function Bonus({ onClick }) {
       <div className="mt-8">
         <button
           className="bg-yellow-400 md:text-[24px] text-black mt-5 px-10 py-3 rounded-full font-bold hover:bg-yellow-500 transition duration-200 transform hover:scale-105"
-          onClick={onClick}
+          onClick={handleSubmit}
         >
           Book Your Free Slot
         </button>

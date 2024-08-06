@@ -2,6 +2,14 @@ import React from "react";
 import coachh from "../assets/coachh.jpg";
 
 const CoachSection = ({ onClick }) => {
+
+  const filled = localStorage.getItem("Filled");
+  const handleSubmit=()=>{
+  if(filled)
+    window.location.href="https://docs.google.com/document/d/10eNhJmtaEznsqm-65QHxbj3B8DepOT1EYofZtZz1XWo/edit#heading=h.sm9gundt5rep";
+  else
+  onClick();
+  }
   return (
     <div className="flex flex-col md:flex-row items-center bg-[#f8f5f8] p-8 md:px-[100px] md:py-16 shadow-lg">
       <div className="w-full md:w-[40%] flex  justify-center items-center">
@@ -29,7 +37,7 @@ const CoachSection = ({ onClick }) => {
         <div className="mt-6 flex justify-center items-center">
           <button
             className="bg-yellow-500 text-md md:text-lg  px-10 text-white py-3 rounded-full font-bold mb-10 shadow-lg hover:bg-yellow-600 transition duration-300"
-            onClick={onClick}
+            onClick={handleSubmit}
           >
             Book Your Free Spot
             <br />
