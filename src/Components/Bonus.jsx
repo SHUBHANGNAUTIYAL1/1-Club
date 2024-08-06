@@ -38,9 +38,9 @@ function Bonus({ onClick }) {
     <div className="min-h-screen px-10 bg-[#f8f5f8] flex flex-col items-center justify-center">
       <div className="text-center mt-5 mb-8">
         <h1 className=" text-[30px] md:text-[50px] font-bold text-black md:animate-bounce">
-          Overcome Stress and Anxiety in 1Hr 
+          Get Bonuses Worth Rs. 7296
         </h1>
-        <h1 className=" text-[20px] mt-4 md:text-[30px] font-bold text-black"> Join and Become Like the Top 1% Successful People</h1>
+       
       </div>
       <div className="grid grid-cols-1 mt-10 lg:grid-cols-4 gap-6">
         {bonuses.map((bonus) => (
