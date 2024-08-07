@@ -118,7 +118,7 @@ const Form2 = ({ onClose }) => {
         }}
       >
         <h2 className="text-xl  md:text-2xl font-bold text-center mb-4 sm:mb-3 md:mb-3 text-gray-800">
-          Book Your Free Spot Now
+          Get your Free 1 minute Guided Meditation
         </h2>
         <div className="mb-4 sm:mb-3 md:mb-3">
           <label

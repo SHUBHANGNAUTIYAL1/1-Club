@@ -44,6 +44,45 @@ const Banners = [
   },
 ];
 
+const Banners2 = [
+  {
+    content:
+      "The session was incredibly insightful and relaxing. I felt a sense of calm wash over me. It's a wonderful way to unwind and find inner peace. Thank you for such a fantastic experience!",
+    name: "Emily",
+    location: "Boston",
+    img: human,
+  },
+  {
+    content:
+      "I couldn't believe how effective the meditation session was. It provided me with the clarity I needed. Lydia's guidance was spot-on. I'll definitely be returning for more sessions!",
+    name: "Michael",
+    location: "Seattle",
+    img: human,
+  },
+  {
+    content:
+      "An absolutely amazing session that left me feeling rejuvenated. The atmosphere was perfect for relaxation. I appreciate the attention to detail and care. Highly recommended for anyone!",
+    name: "Priya",
+    location: "Austin",
+    img: human,
+  },
+  {
+    content:
+      "This meditation session helped me connect with myself on a deeper level. It was a transformative experience. Lydia's expertise and soothing voice made it even more special. Thank you!",
+    name: "Arjun",
+    location: "Denver",
+    img: human,
+  },
+  {
+    content:
+      "A wonderful session that left me feeling at peace. The guided meditation was exactly what I needed to de-stress. Lydia's approach is gentle and effective. Can't wait for the next one!",
+    name: "Sophia",
+    location: "San Diego",
+    img: human,
+  },
+];
+
+
 
 function Carousel() {
   const [slidesToShow, setSlidesToShow] = useState(3);
@@ -126,7 +165,7 @@ function Carousel() {
           {...settings2}
           className="w-[90%]  justify-between hidden md:flex"
         >
-          {Banners.map((banner, index) => (
+          {Banners2.map((banner, index) => (
             <div className="p-5">
               <div
                 className="  bg-[#a4dacd]  justify-between h-[250px] p-5 md:p-10 flex flex-col gap-2 border-2 border-green-800 rounded-xl "
