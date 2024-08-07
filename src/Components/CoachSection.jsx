@@ -15,7 +15,7 @@ const CoachSection = ({ onClick }) => {
       <div className="w-full md:w-[40%] flex  justify-center items-center">
         <img
           src={coachh}
-          className="rounded-lg border-4 border-yellow-500 shadow-lg max-w-full  w-[400px] h-[500px]"
+          className="rounded-lg border-4 object-cover border-yellow-500 shadow-lg max-w-full w-[400px] h-[500px]  md:w-[400px] md:h-[500px]"
         />
       </div>
       <div className="w-full md:w-[60%] mt-8 md:mt-0 md:ml-8">
